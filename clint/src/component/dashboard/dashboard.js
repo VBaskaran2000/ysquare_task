@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import './dashboard.css'
 import { useEffect,useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export function Dashboard(){
     const {s_no}=useParams()
@@ -10,7 +10,7 @@ export function Dashboard(){
     const [department,SetDepartment]=useState('')
     const [phone,SetPhone]=useState('')
     const [email,setEmail]=useState('')
-    
+
     useEffect(()=>{
         fetch("http://localhost:3002/getdata/"+s_no)
         .then(res=>res.json())
@@ -34,9 +34,9 @@ export function Dashboard(){
             <p className="textsize">Your Login Page<br/>
             Completed    Successfully<br/> 
             Thank you !</p>
+        <Link to='/Login' ><button className="btn btn-dark btn border border-radious button">Logout</button></Link>
             </div>
         </div>
-        
         </>
     );
 }
