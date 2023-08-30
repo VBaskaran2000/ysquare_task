@@ -1,0 +1,10 @@
+.bgcolor{
+
+    background-image:linear-gradient(to right,rgba(116, 234, 238, 0.668),rgb(22, 216, 86));
+    height:100vh;
+}
+.textsize{
+    font-size: 30px;
+    font-style: italic;
+    padding-top: 80px;
+}
