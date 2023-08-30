@@ -65,6 +65,7 @@ add.post('/regis',(request,response)=>{
             )
         })
 
+        
     add.get('/getdata/:s_no',(request,response)=>{
         let{s_no}=request.params
         let sql='select * from reg_table where s_no=?'

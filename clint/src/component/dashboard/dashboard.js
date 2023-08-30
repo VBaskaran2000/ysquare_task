@@ -10,6 +10,7 @@ export function Dashboard(){
     const [department,SetDepartment]=useState('')
     const [phone,SetPhone]=useState('')
     const [email,setEmail]=useState('')
+    
     useEffect(()=>{
         fetch("http://localhost:3002/getdata/"+s_no)
         .then(res=>res.json())
